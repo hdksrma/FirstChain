@@ -102,21 +102,4 @@ def is_valid():
 
 # Part 2.D : Running the app
 
-app.run(host = '0.0.0.0', port = 5000)
-
-
-
-
-
- 
-
-
-
-    
-             
-            
-            
-            
-            
-            
-             
+app.run(host = '0.0.0.0', port = 5000) 
