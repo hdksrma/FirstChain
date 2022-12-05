@@ -11,7 +11,7 @@ class Blockchain:
      
     def __init__(self):         
         self.chain = []  
-        self.create_block(proof = 1, previous_hash = '0')
+        self.create_block(proof = 1, previous_hash = '0') # Genesis Block
          
     def create_block(self, proof, previous_hash):
         block = {'index' : len(self.chain) + 1,
@@ -95,11 +95,11 @@ def get_chain():
 def is_valid():
     is_valid = blockchain.is_chain_valid(blockchain.chain)
     if is_valid:
-        response = {'message': 'All good. The Blockchain is valid.'}
+        response = {'message': 'The Blockchain is valid.'}
     else:
-        response = {'message': 'Houston, we have a problem. The Blockchain is not valid.'}
+        response = {'message': 'Oops! The Blockchain invalid.'}
     return jsonify(response), 200
 
 # Part 2.D : Running the app
 
-app.run(host = '0.0.0.0', port = 5000) 
+app.run(host = '0.0.0.0', port = 5000)    
